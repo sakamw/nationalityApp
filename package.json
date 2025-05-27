@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "Format": "prettier --write ."
+    "format": "prettier --write ."
   },
   "devDependencies": {
     "vite": "^6.3.5"
