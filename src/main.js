@@ -1,4 +1,4 @@
-const submitBtn = document.getElementById("submitButton");
+const submitBtn = document.getElementById("subBtn");
 const result = document.getElementById("resultText");
 const nameInput = document.getElementById("nameInput");
 
@@ -7,7 +7,7 @@ submitBtn.addEventListener("click", async function (e) {
   const name = nameInput.value.trim();
 
   if (!name) {
-    result.textContent = "Please enter a name.";
+    result.textContent = "Please enter a name!";
     return;
   }
 
@@ -29,9 +29,9 @@ submitBtn.addEventListener("click", async function (e) {
       const getCountryNames = new Intl.DisplayNames(["en"], { type: "region" });
       const topCountry = data.country[0];
       const countryName = getCountryNames.of(topCountry.country_id);
-      const probability = (topCountry.probability * 100).toFixed(1);
+      const probability = (topCountry.probability * 100).toFixed(0);
 
-      result.textContent = `${name} is most likely from ${countryName} (${probability}% probability)`;
+      result.innerHTML = `<span> ${name} </span> is most likely from <span> ${countryName} </span> with <span> ${probability}% </span> probability`;
     } else {
       result.textContent = "No country prediction available for this name.";
     }
