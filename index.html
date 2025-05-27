@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nationality App</title>
+    <link rel="stylesheet" href="../src/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">Nationality App</div>
+      <nav>
+        <a href="https://github.com/sakamw/nationalityApp" target="_blank"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+        <a href="https://www.linkedin.com/in/isak-me" target="_blank"
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
+      </nav>
+    </header>
+    <form action="">
+      <div class="form-items">
+        <p>Predict the Ethnicity of a Name</p>
+        <input
+          type="text"
+          id="nameInput"
+          placeholder="Last or full name"
+          required
+        />
+        <button id="submitButton">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <div class="result">
+          <p id="resultText"></p>
+        </div>
+      </div>
+    </form>
+    <script type="module" src="../src/main.js"></script>
+  </body>
+</html>
